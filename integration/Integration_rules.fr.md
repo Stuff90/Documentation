@@ -7,6 +7,15 @@ L'objectif étant d'accroître la maintenabilité des projets tout en optimisant
 Ce que l'on appellera **page** ici fait référence aux templates encadrant une page au sens de l'utilisateur (e.g. Home, fiche produit, etc.).  
 Ce que l'on appellera **fragment** ici fait références aux éléments visuel se répétant au travers du site sans pour autant n'appartenir qu'à une seule **page** (e.g. une sidebar, un miniature d'article, une liste, etc.).
 
+### Index
+
+ 1. [HTML](#html)
+ - [Pages](#pages)
+ - [Fragments](#fragments)
+ 2. [LESS](#html)
+	 - [Arborescence](#arborescence)
+	 - [Construction des fichiers](#construction-des-fichiers)
+
 ### HTML
 
 #### Pages
@@ -53,11 +62,11 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 </section>
 ```  
 Pour en savoir un peu plus sur cette pratique, un article intéressant sur le sujet est disponible [sur CSS Wizardy](http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/).
-
+<br>
 #### Fragments
 
 Au même titre que les pages, les **fragment** doivent être identifié clairement. Cependant, il est très probable que ces fragments apparaîssent plusieurs fois dans le DOM aussi l'identification de ces éléments devra se faire par un `class`.
-<br>
+<br><br>
 > Malgré ce constat, il est vrai ue certain élément correspondant à la description d'un **fragment** ne se répèteront jamais plusieurs fois dans une page (e.g. une sidebar ou un header). Dans ces cas là, il est laissé au jugement du développeur le choix d'utiliser un `id`.
 
 <br>
@@ -88,6 +97,9 @@ Les déclinaisons des **fragments** fonctionnent de la même manière que les **
 </article>
 ```  
 > Il est pertinent dans ces cas là de séparer le nom du **fragment** de ses déclinaisons.
+
+<br>
+
 
 ### LESS
 
