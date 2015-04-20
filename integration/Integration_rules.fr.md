@@ -299,7 +299,7 @@ Fichier `author.fragment.less` :
 ##### Media queries
 
 
-
+Les changements de style en fonction de la taille du viewport peuvent être géré de deux façon. Si le projet est d'envergure et/ou qu'il comprends 
 
 
 
