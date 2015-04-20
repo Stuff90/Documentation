@@ -10,11 +10,11 @@ Ce que l'on appellera **fragment** ici fait références aux éléments visuel s
 ### Index
 
  1. [HTML](#html)
- - [Pages](#pages)
- - [Fragments](#fragments)
+  - [Pages](#pages)
+  - [Fragments](#fragments)
  2. [LESS](#html)
-	 - [Arborescence](#arborescence)
-	 - [Construction des fichiers](#construction-des-fichiers)
+  - [Arborescence](#arborescence)
+  - [Construction des fichiers](#construction-des-fichiers)
 
 ### HTML
 
