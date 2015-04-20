@@ -51,6 +51,7 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
     <!-- <p>Content</p> -->
 </section>
 ```
+
 ##### Partials
 
 
