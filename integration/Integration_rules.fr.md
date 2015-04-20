@@ -4,7 +4,8 @@ L'objectif étant d'accroître la maintenabilité des projets tout en optimisant
 
 ### Péambule
 
-Ce que l'on appelle **page** ici correspond aux templates dédié à un 
+Ce que l'on appellera **page** ici fait référence aux templates encadrant une page au sens de l'utilisateur (e.g. Home, fiche produit, etc.).  
+Ce que l'on appellera **fragment** ici fait références aux éléments visuel se répétant au travers du site sans pour autant n'appartenir qu'à une seule **page** (e.g. une sidebar, un miniature d'article, une liste, etc.).
 
 ### HTML
 
@@ -46,6 +47,7 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 
 > Si de nombreuses déclinaisons s'enchaînent comme on peut le voir dans l'exemple ci-dessus, il est possible de grouper les classes les définissants en utilisant des `[]`.  
 > L'utilisation des crochets dans l'attribut `class` est sans conséquences pour l'intertprétation du HTML puisque ces caractère ne sont pas reconnu en tant qu'attributs valides et sont donc ignoré par l'interpréteur. Idem en CSS, n'étant pas des selecteurs valides, la définition de style sur un crochet ne fonctionnera pas et n'impactera pas non plus les selecteurs tels que `.my-input[type=text]`.
+
 ```html
 <section id="product" class="[ page page-archive page-archive-2015 page-archive-2015-article ] [ product-sponsored product-sponsored-dior product-sponsored-dior-shoe ]">
     <!-- <p>Content</p> -->
@@ -53,13 +55,42 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 ```  
 Pour en savoir un peu plus sur cette pratique, un article intéressant sur le sujet est disponible [sur CSS Wizardy](http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/).
 
-##### Partials
+##### Fragments
+
+Au même titre que les pages, les **fragment** doivent être identifié clairement. Cependant, il est très probable que ces fragments apparaîssent plusieurs fois dans le DOM aussi l'identification de ces éléments devra se faire par un `class`.
+
+> Malgré ce constat, il est vrai ue certain élément correspondant à la description d'un **fragment** ne se répèteront jamais plusieurs fois dans une page (e.g. une sidebar ou un header). Dans ces cas là, il est laissé au jugement du développeur le choix d'utiliser un `id`.
+
+Pour que leur utilisation soit pertinente, il convient de nommer les **fragments** de la manière la plus explicite possible.
 
 
+```html
+<article class="project">
+    <!-- <p>Project content</p> -->
+</article>
+```  
+
+Les déclinaisons des **fragments** fonctionnent de la même manière que les **pages**.
+
+
+```html
+<article class="project project-archive project-archive-design project-archive-design-external">
+    <!-- <p>Project content</p> -->
+</article>
+```
+
+> Il est également possible d'utiliser les crochets dans l'attribut `class` pour améliorer la lisibilité  
+```html
+<article class="project [ project-archive project-archive-design project-archive-design-external ] ">
+    <!-- <p>Project content</p> -->
+</article>
+```  
+Il est pertinent dans ces cas là de séparer le nom du **fragment** de ses déclinaisons.
 
 ### LESS
 
-
+##### Arborescence
+##### Construction des fichiers
 
 
 
