@@ -62,7 +62,9 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 </section>
 ```  
 Pour en savoir un peu plus sur cette pratique, un article intéressant sur le sujet est disponible [sur CSS Wizardy](http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/).
+
 <br>
+
 #### Fragments
 
 Au même titre que les pages, les **fragment** doivent être identifié clairement. Cependant, il est très probable que ces fragments apparaîssent plusieurs fois dans le DOM aussi l'identification de ces éléments devra se faire par un `class`.
