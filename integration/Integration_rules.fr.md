@@ -274,7 +274,7 @@ Pour décliner un template, on utilise la fonction `:extend()` fournie par LESS.
 
 Fichier `product.page.less` :
 ```less
-#product-sale:extend(#product)
+.product-sale:extend(#product)
 	margin: auto;
 
 	.product--title {
@@ -293,6 +293,8 @@ Fichier `author.fragment.less` :
 	}
 }
 ```
+
+<br>
 
 ##### Media queries
 
