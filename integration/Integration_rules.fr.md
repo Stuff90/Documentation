@@ -1,10 +1,10 @@
 # Règles d'intégration
-Définition des règles de nommage utilisé sur les projet. L'objectif de ce document est d'uniformiser les règles au travers des projets en s'appuyant sur l'expérience acquise avec les précédents.  
+Définition des règles de nommage utilisé sur les projet. L'objectif de ce document est d'uniformiser les règles au travers des projets en s'appuyant sur l'expérience acquise avec les précédents.
 L'objectif étant d'accroître la maintenabilité des projets tout en optimisant leur conception du point de vue de l'intégration.
 
 ### Péambule
 
-Ce que l'on appellera **page** ici fait référence aux templates encadrant une page au sens de l'utilisateur (e.g. Home, fiche produit, etc.).  
+Ce que l'on appellera **page** ici fait référence aux templates encadrant une page au sens de l'utilisateur (e.g. Home, fiche produit, etc.).
 Ce que l'on appellera **fragment** ici fait références aux éléments visuel se répétant au travers du site sans pour autant n'appartenir qu'à une seule **page** (e.g. une sidebar, un miniature d'article, une liste, etc.).
 
 ### Index
@@ -30,7 +30,7 @@ Chaques **page** est défini par un `id` unique qui servira de base pour toute l
 </section>
 ```
 <br>
-L'utilisation d'un `id` unique permettra la déclinaison d'un template à chaque fois que cela sera nécessaire et cela sans altérer le template initial. Pour décliner un template de **page** il convient cependant d'utiliser une `class` pour l'identifier car la définition de plusieurs `id` [n'est pas recommandé](http://www.w3.org/TR/xhtml1/#h-4.10).  
+L'utilisation d'un `id` unique permettra la déclinaison d'un template à chaque fois que cela sera nécessaire et cela sans altérer le template initial. Pour décliner un template de **page** il convient cependant d'utiliser une `class` pour l'identifier car la définition de plusieurs `id` [n'est pas recommandé](http://www.w3.org/TR/xhtml1/#h-4.10).
 Pour des raison de compréhension, la `class` indiquant la déclinaison d'un template de page sera préfixé par l'`id` de la page et séparé par un `-`.
 <br>
 ```html
@@ -55,13 +55,13 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 </section>
 ```
 <br>
-> Si de nombreuses déclinaisons s'enchaînent comme on peut le voir dans l'exemple ci-dessus, il est possible de grouper les classes les définissants en utilisant des `[]`.  
-> L'utilisation des crochets dans l'attribut `class` est sans conséquences pour l'intertprétation du HTML puisque ces caractère ne sont pas reconnu en tant qu'attributs valides et sont donc ignoré par l'interpréteur. Idem en CSS, n'étant pas des selecteurs valides, la définition de style sur un crochet ne fonctionnera pas et n'impactera pas non plus les selecteurs tels que `.my-input[type=text]`.  
+> Si de nombreuses déclinaisons s'enchaînent comme on peut le voir dans l'exemple ci-dessus, il est possible de grouper les classes les définissants en utilisant des `[]`.
+> L'utilisation des crochets dans l'attribut `class` est sans conséquences pour l'intertprétation du HTML puisque ces caractère ne sont pas reconnu en tant qu'attributs valides et sont donc ignoré par l'interpréteur. Idem en CSS, n'étant pas des selecteurs valides, la définition de style sur un crochet ne fonctionnera pas et n'impactera pas non plus les selecteurs tels que `.my-input[type=text]`.
 ```html
 <section id="product" class="[ page page-archive page-archive-2015 page-archive-2015-article ] [ product-sponsored product-sponsored-dior product-sponsored-dior-shoe ]">
     <!-- <p>Content</p> -->
 </section>
-```  
+```
 Pour en savoir un peu plus sur cette pratique, un article intéressant sur le sujet est disponible [sur CSS Wizardy](http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/).
 
 <br>
@@ -80,7 +80,7 @@ Pour que leur utilisation soit pertinente, il convient de nommer les **fragments
 <article class="project">
     <!-- <p>Project content</p> -->
 </article>
-```  
+```
 
 Les déclinaisons des **fragments** fonctionnent de la même manière que les **pages**.
 
@@ -93,12 +93,12 @@ Les déclinaisons des **fragments** fonctionnent de la même manière que les **
 
 <br>
 
-> Il est également possible d'utiliser les crochets dans l'attribut `class` pour améliorer la lisibilité    
+> Il est également possible d'utiliser les crochets dans l'attribut `class` pour améliorer la lisibilité
 ```html
 <article class="project [ project-archive project-archive-design project-archive-design-external ] ">
     <!-- <p>Project content</p> -->
 </article>
-```  
+```
 > Il est pertinent dans ces cas là de séparer le nom du **fragment** de ses déclinaisons.
 
 <br>
@@ -113,15 +113,15 @@ Les **pages** et les **fragments** sont donc définis comme des éléments conte
 <section id="home" class="page [ page-project ]">
 
 	<article class="project [ project-archive ] ">
-	
+
 		<h2>Project title</h2>
-		
+
 		<time>21 dec 2015</time>
-		
+
 		<p>Project content</p>
-		
+
 	</article>
-	
+
 </section>
 ```
 
@@ -141,17 +141,17 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 
 ```html
 <section id="home" class="page [ page-project ]">
-	
+
 	<article class="project [ project-archive ] ">
-	
+
 		<h2 class="project--title">Project title</h2>
-	
+
 		<time class="project--publicationDate">21 dec 2015</time>
-	
+
 		<p class="project--content">Project content</p>
-	
+
 	</article>
-	
+
 </section>
 ```
 
@@ -165,17 +165,17 @@ Toutes ces règles sont bien sûr combinable entres-elles. Dans le cas d'un él�
 <section id="home" class="page [ page-project ]">
 
 	<article class="project [ project-archive ] ">
-	
+
 		<h2 class="project--title">Project title</h2>
-		
+
 		<h3 class="project-archive--subtitle">Project sub title</h2>
-		
+
 		<time class="project--publicationDate">21 dec 2015</time>
-		
+
 		<p class="project--content">Project content</p>
-		
+
 	</article>
-	
+
 </section>
 ```
 <br>
