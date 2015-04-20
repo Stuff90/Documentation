@@ -51,8 +51,7 @@ En suivant cette logique, il est possible de délciner chaques pages en plusieur
 <section id="product" class="[ page page-archive page-archive-2015 page-archive-2015-article ] [ product-sponsored product-sponsored-dior product-sponsored-dior-shoe ]">
     <!-- <p>Content</p> -->
 </section>
-```
-<br>
+```  
 Pour en savoir un peu plus sur cette pratique, un article intéressant sur le sujet est disponible [sur CSS Wizardy](http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/).
 
 #### Fragments
