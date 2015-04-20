@@ -127,7 +127,7 @@ Les **pages** et les **fragments** sont donc définis comme des éléments conte
 
 <br>
 
-L'utilisation sémantique des tag HTML n'étant pas suffisante dans la plupart des cas, il faut qualifier ces éléments. Pour des raisons d'homogénéité, tous les éléments seront qualifié et non pas seulement balise qui en ont la nécessité. Les conventions de nommage des éléments fils sont également très proche de celle des conteneurs pour 2 raisons. Tout d'abord il est très important d'avoir une homogénéité à travers tout les éléments du site mais aussi pour montrer clairement l'appartenance des fils à tel ou tel conteneur. 
+L'utilisation sémantique des tag HTML n'étant pas suffisante dans la plupart des cas, il faut qualifier ces éléments. Pour des raisons d'homogénéité, tous les éléments seront qualifié et non pas seulement balise qui en ont la nécessité. Les conventions de nommage des éléments fils sont également très proche de celle des conteneurs pour 2 raisons. Tout d'abord il est très important d'avoir une homogénéité à travers tout les éléments du site mais aussi pour montrer clairement l'appartenance des fils à tel ou tel conteneur.
 
 Chaque fils va donc recevoir une `class` définissant clairement sa nature à laquelle on va préfixer le nom du conteneur parent. Les deux parties étant séparé par `--`. Ainsi, le titre d'une page se verra nommer `.page--title` et la date d'un article sera `.article--date`.
 
@@ -138,6 +138,7 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 <br>
 
 
+
 ```html
 <section id="home" class="page [ page-project ]">
 	
@@ -145,7 +146,7 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 	
 		<h2 class="project--title">Project title</h2>
 	
-		<time class="project--date">21 dec 2015</time>
+		<time class="project--publicationDate">21 dec 2015</time>
 	
 		<p class="project--content">Project content</p>
 	
@@ -153,6 +154,13 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 	
 </section>
 ```
+
+<br>
+
+Toutes ces règles sont bien sûr combinable entres-elles. Dans le cas d'un éléments fils appartenant uniquement à une déclinaison donnée d'un conteneur, c'est le nom de cette déclinaison qui servira de préfix à l'élément.
+
+<br>
+
 ```html
 <section id="home" class="page [ page-project ]">
 
@@ -160,9 +168,9 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 	
 		<h2 class="project--title">Project title</h2>
 		
-		<h3 class="project-archive--subtitle">Project title</h2>
+		<h3 class="project-archive--subtitle">Project sub title</h2>
 		
-		<time class="project--date">21 dec 2015</time>
+		<time class="project--publicationDate">21 dec 2015</time>
 		
 		<p class="project--content">Project content</p>
 		
@@ -170,6 +178,8 @@ Chaque fils va donc recevoir une `class` définissant clairement sa nature à la
 	
 </section>
 ```
+<br>
+> De nombreux cas ne sont pas couvert par les règles édicté ici mais les principe fondamentaux étant clairement établit, il est laissé au jugement du développeur l'utilisation cohérente de ces lignes directrices.
 
 ### LESS
 
