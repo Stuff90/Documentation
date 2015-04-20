@@ -198,7 +198,7 @@ L'arborescence utilisé est défini selon l'organisation de ce [repository](http
 
 ```
 less
-│└   style.less    
+│ └   style.less    
 │
 ├───conf
 │  │   colorscheme.less
@@ -217,14 +217,46 @@ less
 │  └  xxx.page.less
 │
 └───libraries
-    │  xxx
+    └  xxx
 ```
+On retrouve ici la même séparation entre les **pages** et les **fragments**. Les deux types de conteneurs ont le pattern de fichier `name.type.less` (une **page** sera nommé `home.page.less` et un **fragment** `list.fragment.less`). De cette façon, aucun doute ne pourra être soulevé quant à la nature de l'éléments contenu dans le fichier.
 
+<br>
 
 #### Construction des fichiers
 
+A l'exception des fichiers de configuration, toutes les feuilles de style suivent le même schema.
 
 
+Fichier `product.page.less` :
+```less
+#product {
+	background-color: teal;
+	color: tomato;
+
+	.product--title {
+		font-weight: 500;
+	}
+	.product--availability {
+		font-size: 1.2rem;
+	}
+}
+```
+
+Fichier `author.fragment.less` :
+```less
+.author {
+	width: 5rem;
+	height: 5rem;
+
+	.author--firstName, .author--lastName {
+		font-size: .8rem;
+	}
+	.author--lastName {
+		color: tan;
+	}
+}
+```  
 
 
 
