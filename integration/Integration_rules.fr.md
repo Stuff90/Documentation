@@ -12,6 +12,7 @@ Ce que l'on appellera **fragment** ici fait références aux éléments visuel s
  1. [HTML](#html)
   - [Pages](#pages)
   - [Fragments](#fragments)
+  - [Elements fils](#elements-fils)
  2. [LESS](#html)
   - [Arborescence](#arborescence)
   - [Construction des fichiers](#construction-des-fichiers)
@@ -102,6 +103,73 @@ Les déclinaisons des **fragments** fonctionnent de la même manière que les **
 
 <br>
 
+#### Elements fils
+
+Les **pages** et les **fragments** sont donc définis comme des éléments conteneurs. Pour créer des templates riches ou tout simplement de taille plus importante, il faut donc des éléments fils appartenant spécifiquement à un conteneur (quelque soit sont type).
+
+<br>
+
+```html
+<section id="home" class="page [ page-project ]">
+
+	<article class="project [ project-archive ] ">
+	
+		<h2>Project title</h2>
+		
+		<time>21 dec 2015</time>
+		
+		<p>Project content</p>
+		
+	</article>
+	
+</section>
+```
+
+<br>
+
+L'utilisation sémantique des tag HTML n'étant pas suffisante dans la plupart des cas, il faut qualifier ces éléments. Pour des raisons d'homogénéité, tous les éléments seront qualifié et non pas seulement balise qui en ont la nécessité. Les conventions de nommage des éléments fils sont également très proche de celle des conteneurs pour 2 raisons. Tout d'abord il est très important d'avoir une homogénéité à travers tout les éléments du site mais aussi pour montrer clairement l'appartenance des fils à tel ou tel conteneur. 
+
+Chaque fils va donc recevoir une `class` définissant clairement sa nature à laquelle on va préfixer le nom du conteneur parent. Les deux parties étant séparé par `--`. Ainsi, le titre d'une page se verra nommer `.page--title` et la date d'un article sera `.article--date`.
+
+<br>
+
+> A noter que le nom de l'élément peut être composé de plusieurs mots pour le qualifier clairement . Dans ce cas là, on utilisera le camel case pour l'identifier (e.g. `.article--publicationDate`)
+
+<br>
+
+
+```html
+<section id="home" class="page [ page-project ]">
+	
+	<article class="project [ project-archive ] ">
+	
+		<h2 class="project--title">Project title</h2>
+	
+		<time class="project--date">21 dec 2015</time>
+	
+		<p class="project--content">Project content</p>
+	
+	</article>
+	
+</section>
+```
+```html
+<section id="home" class="page [ page-project ]">
+
+	<article class="project [ project-archive ] ">
+	
+		<h2 class="project--title">Project title</h2>
+		
+		<h3 class="project-archive--subtitle">Project title</h2>
+		
+		<time class="project--date">21 dec 2015</time>
+		
+		<p class="project--content">Project content</p>
+		
+	</article>
+	
+</section>
+```
 
 ### LESS
 
