@@ -225,6 +225,8 @@ On retrouve ici la même séparation entre les **pages** et les **fragments**. L
 
 #### Construction des fichiers
 
+La construction des fichiers LESS est complexe car la longueur de certain fichier rend souvent la lisibilité difficile. Cela est d'autant plus vrai lorsque le projet comprend de nombreuse déclinaison dans ses templates.
+
 ##### Conteneurs et éléments enfants
 
 A l'exception des fichiers de configuration, toutes les feuilles de style suivent le même schema. Le conteneur va êtres défini en premier et contiendra toute ses définition filles de sorte qu'une fois compilé, le nom du conteneur tienne lieu de `namespace`.
@@ -266,7 +268,31 @@ Fichier `author.fragment.less` :
 
 ##### Déclinaisons
 
-Pour la définition 
+La définition des déclinaisons d'un template se trouve dans le même fichier que l'élément décliné. Ainsi, dans le fichier `product.page.less` nous trouverons tous les templates de produits différents.  
+Pour décliner un template, on utilise la fonction `:extend()` fournie par LESS.
+
+
+Fichier `product.page.less` :
+```less
+#product-sale:extend(#product)
+	margin: auto;
+
+	.product--title {
+		font-weight: 300;
+	}
+}
+```
+
+Fichier `author.fragment.less` :
+```less
+.author-premium:extend(.author) {
+	border: solid .2rem @black;
+
+	.author--lastName {
+		color: chocolate;
+	}
+}
+```
 
 ##### Media queries
 
