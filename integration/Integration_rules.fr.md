@@ -4,7 +4,7 @@ L'objectif étant d'accroître la maintenabilité des projets tout en optimisant
 
 <br>
 
-### Péambule
+### Préambule
 
 Ce que l'on appellera **page** ici fait référence aux templates encadrant une page au sens de l'utilisateur (e.g. Home, fiche produit, etc.).  
 Ce que l'on appellera **fragment** ici fait références aux éléments visuel se répétant au travers du site sans pour autant n'appartenir qu'à une seule **page** (e.g. une sidebar, un miniature d'article, une liste, etc.).
