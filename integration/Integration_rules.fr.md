@@ -299,8 +299,68 @@ Fichier `author.fragment.less` :
 ##### Media queries
 
 
-Les changements de style en fonction de la taille du viewport peuvent être gérés de deux façons. Si le projet est d'envergure et/ou qu'il comprend
+Les changements de style en fonction de la taille du viewport peuvent être gérés de deux façons. Si le projet est d'envergure et/ou qu'il comprend de nombreux breakpoints, il sera plus avantageux de disposer d'un fichier par breakpoint traité. Dans le cas d'un projet plus réduit ou bien que le style contenu dans des media queries est relativement réduit, il sera plus avantageux de le laisser dans le même fichier.
 
+<br>
+
+Dans le cas de l'utilisation de plusieurs fichier, la convention de nommage de ceux-ci doit être cohérente par rapport aux autres fichier LESS. Il convient donc d'utiliser la syntaxe `name.device.type.less` (une page sera donc nommé `product.mobile.page.less`).  
+L'arborescence quant à elle reste la même puisque le fichier dédié à la media query se placera dans le même répertoire que le parent.
+
+
+```
+less
+├───pages
+│  │  sample.page.less
+│  │  sample.mobile.page.less
+│  └  xxx.page.less
+│
+[...]
+```
+
+Au début de ce fichier dédié, il faut bien sûr rappeler le nom de l'élément surchargé. Il est également conseillé d'ajouter en commentaire la nature (et si besoin le role) et cette media query.
+```less
+// Mobile
+// Devices with width <= 720
+
+@media only screen and (max-width: 721px)
+	#product {		
+		.product--availability {
+			font-size: 2rem;
+		}
+	}
+}
+```
+
+<br>
+
+Dans le cas de l'utilisation du même fichier, le role de la media query doit être clairement indiqué en commentaire avant sa définition. L'élément conteneur devra également être rappelé avant tout autre sélecteur pour que la gestion des priorités de l'interpréteur soit correctement appliquée.
+
+```less
+#product {
+	background-color: teal;
+	color: tomato;
+	
+	.product--availability {
+		font-size: 1.2rem;
+	}
+}
+
+// Mobile
+
+@media only screen and (max-width: 720px)
+	#product {		
+		.product--availability {
+			font-size: 2rem;
+		}
+	}
+}
+```
+
+<br>
+
+> La prise de décision pour l'utilisation d'un technique ou d'une autre peut être cornélienne car le périmètre du projet peut changer ou bien une V2 de celui-ci peut être demander etc. Pour se prémunir contre ces changements d'échelles il est tout à fait possible de changer l'organisation de ses fichiers en cours de projet.
+
+<br>
 
 
 
