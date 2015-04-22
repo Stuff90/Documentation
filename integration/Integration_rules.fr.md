@@ -16,7 +16,7 @@ Ce que l'on appellera **fragment** ici fait référence aux éléments visuels s
  1. [HTML](#html)
   - [Pages](#pages)
   - [Fragments](#fragments)
-  - [Éléments enfants](#elements-enfants)
+  - [Éléments enfants](##%C3%89l%C3%A9ments-enfantss)
  2. [LESS](#less)
   - [Arborescence](#arborescence)
   - [Construction des fichiers](#construction-des-fichiers)
