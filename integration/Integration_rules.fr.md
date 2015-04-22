@@ -293,6 +293,32 @@ Fichier `author.fragment.less` :
 	}
 }
 ```
+<br>
+
+Dans le cas d'un déclinaison utilisant le style des enfants de la classe parente sur ses propre enfants, il convient d'utiliser le mot clef `all`.
+
+```less
+.author {
+	border: solid .2rem @black;
+
+	.author--lastName {
+		color: chocolate;
+	}
+}
+
+.author-premium:extend(.author all) {
+	border: solid .2rem @black;
+
+	.author--lastName {
+		// "color: chocolate;" is applied but come from the parent
+		font-style: italic;
+	}
+}
+```
+
+<br>
+
+> Pour plus de renseignement au sujet de la fonction `:extend()` dans LESS, la [documentation](http://lesscss.org/features/#extend-feature) donne de nombreuses informations et exemples.
 
 <br>
 
