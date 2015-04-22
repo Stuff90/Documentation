@@ -7,7 +7,7 @@ The final goal is to increase the maintainability of projects as well as optimiz
 
 ### Preamble
 
-The term **page** refer to templates containing an entire page from the final user point of view (e.g. Home, product, etc.).    
+The term **page** refer to templates containing an entire page from the final user point of view (e.g. Home, product, etc.).     
 The term **fragment** refer to visual elements appearing multiple times throughout the website and also without belonging to only one **page**  (e.g. sidebar, article thumbnail, liste item, etc.).
 
 <br>
@@ -27,6 +27,29 @@ The term **fragment** refer to visual elements appearing multiple times througho
 ### HTML
 
 #### Pages
+
+Each **page** is defined by an unique `id` which will be the root element for every potential declinations. This `id` is paired with the `class` dedicated to page declaration : `page`.
+
+<br>
+
+```html
+<section id="product" class="page">
+    <!-- <p>Content</p> -->
+</section>
+```
+<br>
+
+Using a unique `id` allow to decline a template anytime it would be necessary and this, without altering initial template. In order to decline a **page**, it is necessary to identify it with a `class`. Using several `id` on a element is [not recommended](http://www.w3.org/TR/xhtml1/#h-4.10).  
+For understanding reasons, the `class` used to decline a template must be prefixed by the `id` of the page declined and splitted by a `-`.
+
+<br>
+
+```html
+<section id="product" class="page product-sponsored">
+    <!-- <p>Sponsored content</p> -->
+</section>
+```
+<br>
 
 #### Fragments
 
