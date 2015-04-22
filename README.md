@@ -1,3 +1,3 @@
 # Documentation
 
-Documentation repo gather explicited rules to use during projects.
+Documentation repo gathering explicit rules to use during projects.
