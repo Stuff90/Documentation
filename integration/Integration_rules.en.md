@@ -51,7 +51,7 @@ For understanding reasons, the `class` used to decline a template must be prefix
 ```
 <br>
 
-It is also possible to edit several **pages** by declinate of the `class`.
+It is also possible to edit several **pages** by declinate of the `class` `.page`.
 
 #### Fragments
 
