@@ -324,6 +324,11 @@ Dans le cas d'un déclinaison utilisant le style des enfants de la classe parent
 
 ##### Media queries
 
+<br>
+
+Attention: Des modifications vont être apporté ici prochainement.
+
+<br>
 
 Les changements de style en fonction de la taille du viewport peuvent être gérés de deux façons. Si le projet est d'envergure et/ou qu'il comprend de nombreux breakpoints, il sera plus avantageux de disposer d'un fichier par breakpoint traité. Dans le cas d'un projet plus réduit ou bien que le style contenu dans des media queries est relativement réduit, il sera plus avantageux de le laisser dans le même fichier.
 
