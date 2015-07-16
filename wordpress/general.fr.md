@@ -52,6 +52,13 @@ La commande `deploy` quant a elle installe le projet en environnement de product
 ```bash
 npm deploy
 ```
+
+##### Bower
+
+Contrairement à NPM, Bower est utilisé uniquement pour les librairies et outils utilisés par le projet. Aucune confusion ne peut être ainsi faite entre les deux gestionnaires de dépendances.
+
+> Le fichier de configuration de Bower `bower.json`est un fichier qui sera généré par Stonemason et seules les nouvelles versions ou les librairies additionnelles devront être renseigné.
+
 #### Outils de développement
 
 #### Outils d'intégration
